@@ -1,5 +1,6 @@
-fun main(args: Array<String>) {
-    val input = args.first()
+fun main() {
+    val input = "rock paper"
+    
     println("Input: $input")
 
     val output = RockPaperScissors(input).play()

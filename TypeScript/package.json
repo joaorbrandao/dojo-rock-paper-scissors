@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Rock, Paper, Scissors game in TypeScript",
   "scripts": {
-    "precompile": "rimraf src/**/*.js test/**/*.js",
-    "compile": "tsc",
+    "prebuild": "rimraf src/**/*.js test/**/*.js",
+    "prestart": "npm run build",
     "pretest": "rimraf src/**/*.js test/**/*.js",
+    "build": "tsc",
+    "start": "node dist/src/main.js",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },

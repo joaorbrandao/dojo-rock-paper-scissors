@@ -296,4 +296,3 @@ __pycache__/
 NLog.config
 ._.DS_Store
 .DS_Store
-src/Friday.AzureFunctions/local.settings.json

@@ -4,11 +4,6 @@ namespace Friday.RockPaperScissors.Tests;
 
 public class RockPaperScissorsTest
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
-
     [Test]
     public void RockBeatsScissors()
     {

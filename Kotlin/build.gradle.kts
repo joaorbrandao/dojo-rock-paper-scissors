@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "2.0.21"
@@ -8,6 +7,22 @@ plugins {
 
 group = "com.github.joaorbrandao"
 version = "1.0-SNAPSHOT"
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
+    }
+}
+
+application {
+    mainClass.set("MainKt")
+}
 
 repositories {
     mavenCentral()
@@ -19,15 +34,4 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-}
-
-
-tasks.withType<KotlinCompile> {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_21)
-    }
-}
-
-application {
-    mainClass.set("MainKt")
 }
